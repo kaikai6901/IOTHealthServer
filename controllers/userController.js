@@ -26,7 +26,7 @@ class userController{
                     bcrypt.compare(req.body.password,data.password,(err,same)=>{
                         if(same){
     
-                            var token=jwt.sign({_id:data._id},'nghiango')
+                            var token=jwt.sign({_id:data._id},'huyhoang')
                             res.status(200).json(token)
     
                             
