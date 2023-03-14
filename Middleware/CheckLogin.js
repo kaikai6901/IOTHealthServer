@@ -40,7 +40,7 @@ var CheckLoginForLogout=(req,res,next)=>{
            
             let token=req.headers.token
             //token=token.slice(1,token.length-1)
-            let data=jwt.verify(token,'nghiango')
+            let data=jwt.verify(token,'huyhoang')
             Account.findById(data._id)
             .then(data=>{
             if(!data){
@@ -72,7 +72,7 @@ var CheckLoginNoData=(req,res,next)=>{
          
             let token=req.headers.token
            // token=token.slice(1,token.length-1)
-            let data=jwt.verify(token,'nghiango')
+            let data=jwt.verify(token,'huyhoang')
             console.log(data)
             Account.findById(data._id)
             .then(data=>{
